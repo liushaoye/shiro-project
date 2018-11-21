@@ -1,4 +1,4 @@
-package com.baidu.test;
+package com.baidu.test.authentication;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
@@ -20,26 +20,23 @@ import org.junit.Test;
  * @version : 2.0
  * @description :
  *
- *     Shiro授权
+ *     Shiro环境搭建
  *
  *******************************/
 
 @Slf4j
-public class AuthorizedTest {
+public class AuthenticationTest {
 
     SimpleAccountRealm simpleAccountRealm = new SimpleAccountRealm();
-    SimpleAccountRealm simpleAccountRealm2 = new SimpleAccountRealm();
 
     @Before
     public void addUser() {
         //提前添加用户在环境中
-        simpleAccountRealm.addAccount("zhangsan", "123456","admin");
-        //同时多个用户授权
-        simpleAccountRealm2.addAccount("zhangsan", "123456","admin","user");
+        simpleAccountRealm.addAccount("zhangsan", "123456");
     }
 
     @Test
-    public void AuthorizedTest() {
+    public void authenticationTest() {
 
 //        1、构建SecurityManager环境
         DefaultSecurityManager defaultSecurityManager = new DefaultSecurityManager();
@@ -53,31 +50,21 @@ public class AuthorizedTest {
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken("zhangsan", "123456");
         subject.login(usernamePasswordToken);
 
+        boolean uthenticated = subject.isAuthenticated();
 
+        log.info("是否认证通过");
+        if (uthenticated) {
+            log.info("\n");
+            log.info("通过结果:" + "是");
+        } else {
+            log.info("\n");
+            log.info("通过结果:" + "否");
+        }
+
+
+        subject.logout();
+
+        log.info("是否认证通过"+subject.isAuthenticated());
         System.out.println(subject.isAuthenticated());
-
-        subject.checkRole("admin");
-    }
-
-
-    @Test
-    public void authorized2Test() {
-
-//        1、构建SecurityManager环境
-        DefaultSecurityManager defaultSecurityManager = new DefaultSecurityManager();
-        // 提前的参数加入环境中
-        defaultSecurityManager.setRealm(simpleAccountRealm2);
-
-//          2、主体提交认证请求,主体授权,交给了SecurityManager授权,SecurityManager使用Authorizer进行授权,通过Realm获取缓存中的数据
-        SecurityUtils.setSecurityManager(defaultSecurityManager);
-        Subject subject = SecurityUtils.getSubject();
-
-        UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken("zhangsan", "123456");
-        subject.login(usernamePasswordToken);
-
-
-        System.out.println(subject.isAuthenticated());
-
-        subject.checkRoles("admin","user");
     }
 }
