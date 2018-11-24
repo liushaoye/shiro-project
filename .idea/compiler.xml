@@ -7,10 +7,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="baidushiro" />
+        <module name="shiro-web-config" />
+        <module name="shiro-web-data" />
+        <module name="shiro-web-session" />
+        <module name="shiro-web-visit" />
+        <module name="use-own-pression" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="baidu-shiro-web" target="1.8" />
       <module name="baidushiro" target="1.5" />
+      <module name="shiro-web-config" target="1.8" />
+      <module name="shiro-web-data" target="1.8" />
+      <module name="shiro-web-session" target="1.8" />
+      <module name="shiro-web-visit" target="1.8" />
+      <module name="use-own-pression" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

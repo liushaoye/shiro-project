@@ -4,6 +4,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/baidushiro/pom.xml" />
+        <option value="$PROJECT_DIR$/../shiro-web-visit/pom.xml" />
+        <option value="$PROJECT_DIR$/../shiro-web-data/pom.xml" />
+        <option value="$PROJECT_DIR$/../shiro-web-config/pom.xml" />
+        <option value="$PROJECT_DIR$/../use-own-pression/pom.xml" />
+        <option value="$PROJECT_DIR$/../shiro-web-session/pom.xml" />
       </list>
     </option>
   </component>

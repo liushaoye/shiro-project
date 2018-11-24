@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/../shiro-web-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../shiro-web-data" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../shiro-web-session" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../shiro-web-visit" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../use-own-pression" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
