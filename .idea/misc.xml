@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/../shiro-web-config/pom.xml" />
         <option value="$PROJECT_DIR$/../use-own-pression/pom.xml" />
         <option value="$PROJECT_DIR$/../shiro-web-session/pom.xml" />
+        <option value="$PROJECT_DIR$/../shiro-web-cache/pom.xml" />
       </list>
     </option>
   </component>

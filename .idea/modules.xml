@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/baidushiro/baidushiro.iml" filepath="$PROJECT_DIR$/baidushiro/baidushiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../shiro-web-cache/shiro-web-cache.iml" filepath="$PROJECT_DIR$/../shiro-web-cache/shiro-web-cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/../shiro-web-config/shiro-web-config.iml" filepath="$PROJECT_DIR$/../shiro-web-config/shiro-web-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/../shiro-web-data/shiro-web-data.iml" filepath="$PROJECT_DIR$/../shiro-web-data/shiro-web-data.iml" />
       <module fileurl="file://$PROJECT_DIR$/../shiro-web-session/shiro-web-session.iml" filepath="$PROJECT_DIR$/../shiro-web-session/shiro-web-session.iml" />
